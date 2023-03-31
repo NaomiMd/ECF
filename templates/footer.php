@@ -1,7 +1,7 @@
 
-<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top" id="footer" > 
     <div class="col mb-3">
-      <p class="m-5"> <img src="assets/logo.png" alt="logo" width="200" ></p>
+      <p class="m-5"> <img class="logo-footer" src="assets/logo.png" alt="logo"></p>
     </div>
 
     <div class="col mb-3">
@@ -9,7 +9,7 @@
     </div>
 
     <div class="col mb-3">
-      <h5>Horaires :</h5>
+      <h5 class="footer-title">Horaires :</h5>
       <ul class="nav flex-column">
         <p class="nav-item mb-2">Lundi : Fermé</p>
         <p class="nav-item mb-2">Mardi-Samedi :</p>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="col mb-3">
-      <h5>Adresse :</h5>
+      <h5 class="footer-title">Adresse :</h5>
       <ul class="nav flex-column">
         <p class="nav-item mb-2">Le Quai Antique </p>
         <p class="nav-item mb-2">17, Place Frank</p>
@@ -30,10 +30,10 @@
     </div>
 
     <div class="col mb-3">
-      <h5>Suivez nous :</h5>
+      <h5 class="footer-title">Suivez nous :</h5>
       <ul class="nav flex-row">
-      <p class="nav-item m-2"><i class="bi bi-instagram"></i></p>
-      <p class="nav-item m-2"><i class="bi bi-twitter"></i></p>
+        <a href="https://www.instagram.com/" class="nav-item m-2"><i class="bi bi-instagram m-2"></i></a>
+        <a href="https://twitter.com/?lang=fr" class="nav-item m-2"><i class="bi bi-twitter"></i></a>
       </ul>
     </div>
   </footer>
