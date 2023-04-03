@@ -4,15 +4,24 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
-
-.nav-link{
+body{
     font-family: 'Josefin Sans', sans-serif;
+}
+/* NAV */
+.nav-link{
     font-size: 16px;
     font-weight: 400;
     color: white;
-}
+    display: flex;
+    justify-content: flex-end;
 
+}
+.nav-item{
+    font-size: 16px;
+}
+/*FOOTER*/
 #footer{
     background-color: #5E503F;
     color: white;
@@ -24,34 +33,96 @@
     font-size: 20px;
 }
 
-.nav-item{
-    font-family: "Josefin", sans-serif;
-    font-size: 16px;
-}
-
 .bi{
     color: white;
 }
+/*IMG NAV ACCUEIL*/
+#banner-img{
+    background-image: url("header-accueil.jpg");
+    background-repeat: no-repeat;
+    background-position: 60% 40%;
+    opacity: .9;
+    background-size: cover;
+    background-color: #5E503F;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*LOGO*/
+.logoheader{
+    width: 300px;
+}
+/*ACCUEIL*/
+#presentation{
+    background-color: #a9927d52;
+    color: #0A0908;
+    font-weight: 400;
+}
 
-@media screen and (min-width: 1100px) {
-    
+.title{
+    font-family: 'Alegreya', sans-serif;
+    overflow: hidden;
+} 
+
+.container-fluid.cuisine{ 
+        background-color: #F2F4F3;
+        padding: 0;
+}
+
+.text{
+    text-align: center;
+}
+
+
+/*MEDIA PC*/
+@media screen and (min-width: 1224px) {
+    /*NAV*/
     .nav-link{
         font-size: 16px;
     }
-    
-    .footer-title{
-        font-size: 20px;
-    }
-    
     .nav-item{
         font-size: 16px;
+    }
+    /*FOOTER*/
+    .footer-title{
+        font-size: 20px;
     }
     .logo-footer{
         position: absolute;
         left: 200px;
         width: 200px;
     }
-
+    /*ACCUEIL*/
+    #presentation{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 18px;
+    }
+    .container-fluid.cuisine{ 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title{
+        font-size: 40px;
+        font-weight: 500;
+        padding-top: 20%;
+    }
+    .text p{
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    hr{
+        border: none;
+        border-top: 2px solid;
+        color:black;
+        width:20%;
+        margin:0 auto;
+    }
+    .img-cuisine{
+        width: 110vh;
+        height: auto;
+    }
 
 }
 
