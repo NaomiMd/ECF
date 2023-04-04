@@ -37,7 +37,32 @@ comme au dîner une expérience gastronomique, à travers une cuisine sans artif
     la meilleure expérience gastronomique
     possible.
     </p>
+</div>
+</div>
 
+<!-- GALERIE -->
+
+<div id="grid">
+    <div class="grid-item">
+        <img src="assets/dessert1.jpg" alt="" class="grid-img">
+        <span class="img-title">Title</span>
+    </div>
+    <div class="grid-item">
+        <img src="assets/dessert1.jpg" alt=""  class="grid-img" >
+        <span class="img-title" >Title</span>
+    </div>
+    <div class="grid-item">
+        <img src="assets/dessert1.jpg" alt=""  class="grid-img" >
+        <span class="img-title" >Title</span>
+    </div>
+    <div class="grid-item">
+        <img src="assets/dessert1.jpg" alt=""  class="grid-img" >
+        <span class="img-title" >Title</span>
+    </div>
 </div>
+
+<!-- RESERVER -->
+<hr class="reserver" >
+<div class="container-fluid button d-flex justify-content-center">
+    <a class="btn-reserver" href="">Réserver</a>
 </div>
- 
