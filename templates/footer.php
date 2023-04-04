@@ -1,5 +1,5 @@
 
-<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top" id="footer" > 
+<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 p-5 border-top" > 
     <div class="col mb-3">
       <p class="m-5"> <img class="logo-footer" src="assets/logo.png" alt="logo"></p>
     </div>
@@ -37,7 +37,6 @@
       </ul>
     </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
 </html>
