@@ -62,7 +62,7 @@ comme au dîner une expérience gastronomique, à travers une cuisine sans artif
 </div>
 
 <!-- RESERVER -->
-<hr class="reserver" >
+
 <div class="container-fluid button d-flex justify-content-center">
     <a class="btn-reserver" href="">Réserver</a>
 </div>
