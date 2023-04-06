@@ -43,32 +43,43 @@ footer{
     justify-content: center;
     align-items: center;
 }
+#banner-carte{
+    background-image: url("carteHeader.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: .9;
+    background-size: cover;
+    background-color: #5E503F;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*LOGO*/
 .logoheader{
     width: 300px;
 }
 /*ACCUEIL*/
 #presentation{
-    background-color: #a9927d52;
+    background-color: rgba(169, 147, 126, 0.4);
     color: #0A0908;
     font-weight: 400;
 }
-
 .title{
     font-family: 'Alegreya', sans-serif;
     font-weight: 500;
     overflow: hidden;
 } 
-hr{
-    border: none;
-    border-top: 2px solid;
-    color:black;
-    width:20%;
-    margin:0 auto;
+.line{
+    height: 1px;
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+    background-color: #5E503F;
 }
 
 .container-fluid.cuisine{ 
-        background-color: #F2F4F3;
+        background-color: rgba(242, 244, 243, 0.1);
         padding: 0;
 }
 .text{
@@ -76,7 +87,7 @@ hr{
 }
 /*BUTTON*/
 .container-fluid.button{
-    background-color: #a9927d4f;
+    background-color: rgba(169, 147, 126, 0.1);
     padding: 50px;
 }
 .btn-reserver {
@@ -93,7 +104,7 @@ hr{
 /*SLIDER*/
 #grid{
     position: relative;
-    background-color: #a9927d4f;
+    background-color: rgba(169, 147, 126, 0.1);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-auto-rows: 350px;
@@ -101,7 +112,7 @@ hr{
     height: 100vh;
     overflow: hidden;
     grid-auto-flow: dense;
-    padding: 15px;
+    padding: 20px;
 }
 .grid-item{
     overflow: hidden;
@@ -131,7 +142,51 @@ hr{
     left: 15px;
     font-size: 20px;
 }
-
+.container.text-center.mt-5{
+    border: 1px solid #5E503F;
+    padding: 25px;
+}
+ 
+#titlemenu{
+    font-family: "Alegreya", sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+}
+#titlecarte{
+    font-family: "Alegreya", sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.pagetitle{
+    color: white;
+    font-family: 'Alegreya' sans-serif;
+    font-weight: 500;
+}
+.menuTitle{
+    font-family: 'Alegreya' sans-serif;
+    font-weight: 400;
+}
+.menu{
+    color: #0A0908;
+    font-weight: 400;
+}
+.italic{
+    font-style: italic;
+}
+.underline{
+    height: 1px;
+    width: 8%;
+    margin-left: 46%;
+    text-align: center;
+    background-color:#5E503F;
+}
+.accordion.mt-5.mb-5{
+    padding: 0 20%;
+}
+.accordion-button:not(.collapsed){
+    background-color: #F2F4F3;
+}
 /*MEDIA MOBILE*/
 @media screen and (min-width: 320px) and (max-width: 1223px) {
     /*NAV*/
@@ -162,12 +217,13 @@ hr{
     }
     .title{
         font-size: 25px;
-        padding-top: 20%;
+        padding-top: 5%;
     }
     .text p{
-        padding-top: 25px;
         font-size: 16px;
-        padding-bottom: 20%;
+        padding: 10px 20px 40px;
+        text-align: center;
+        margin: 0 50px;
     }
     .img-cuisine{
         width: 100%;
@@ -193,7 +249,21 @@ hr{
     .grid-img:hover{
         transform: scale(1.0);
     }
-
+    .container.text-center.mt-5{
+        width: 70%;
+    }
+    #titlemenu{
+        font-size: 22px;
+    }
+    .pagetitle{
+        font-size: 45px;
+    }
+    .menuTitle{
+        font-size: 22px;
+    }
+    .menu{
+        font-size: 16px;
+    }
 }
 
 /*MEDIA PC*/
@@ -216,29 +286,36 @@ hr{
     }
     /*ACCUEIL*/
     #presentation{
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 100px;
+        padding-bottom: 100px;
         font-size: 18px;
+
     }
     .container-fluid.cuisine{ 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
     .title{
-        font-size: 50px;
-        padding-top: 25%;
+        font-size: 35px;
+        padding-top: 20%;
     }
     .text p{
-        padding-top: 20px;
+        margin-left: 20px;
+        padding: 35px 100px;
         font-size: 18px;
+        text-align: center;
     }
     .img-cuisine{
-        width: 110vh;
+        width: 100%;
         height: auto;
+        padding-top: 20px;
+      
     }
     .img-chef{
-        width: 110vh;
-        height: auto;
+        width: 100%;
+        height: 90%;
+        padding-bottom: 20px;
+        padding-top: 30px;
     }
     .grid-item:hover{
         transform: scale(1.05);
@@ -255,7 +332,20 @@ hr{
     font-size: 18px;
     padding: 15px;
     }
-
-
+    #titlemenu{
+        font-size: 30px;
+    }
+    .pagetitle{
+        font-size: 50px;
+    }
+    .menuTitle{
+        font-size: 25px;
+    }
+    .menu{
+        font-size: 18px;
+    }
+    .container.text-center.mt-5{
+        width: 30%;
+    }
 }
 
