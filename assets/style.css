@@ -55,6 +55,18 @@ footer{
     justify-content: center;
     align-items: center;
 }
+#banner-login{
+    background-image: url("login.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: .9;
+    background-size: cover;
+    background-color: #5E503F;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*LOGO*/
 .logoheader{
     width: 300px;
@@ -187,6 +199,21 @@ footer{
 .accordion-button:not(.collapsed){
     background-color: #F2F4F3;
 }
+/*CONNEXION*/
+#connexionform{
+    background-color: rgba(169, 146, 125, 0.23);
+    border-radius: 10px;
+}
+#btnconnexion{
+    background-color: #49111C;
+    color: #F2F4F3;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow:  2px 2px 5px #0A0908;  
+    transition: all 0.5s ease;
+}
 /*MEDIA MOBILE*/
 @media screen and (min-width: 320px) and (max-width: 1223px) {
     /*NAV*/
@@ -263,6 +290,19 @@ footer{
     }
     .menu{
         font-size: 16px;
+    }
+    #connexionform{
+        width: 60%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #btnconnexion{
+        font-size: 14px;
+        padding:10px;
+    }
+    #btnconnexion:hover{
+        font-size: 12px;
+        padding: 8px;
     }
 }
 
@@ -346,6 +386,19 @@ footer{
     }
     .container.text-center.mt-5{
         width: 30%;
+    }
+    #connexionform{
+        width: 30%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #btnconnexion{
+        font-size: 16px;
+        padding: 12px;
+    }
+    #btnconnexion:hover{
+        font-size: 14px;
+        padding: 10px;
     }
 }
 
