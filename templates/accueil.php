@@ -72,5 +72,5 @@ voluptate velit, illo tempora neque quos asperiores et magni corporis perferendi
 <!-- RESERVER -->
 
 <div class="container-fluid button d-flex justify-content-center">
-    <a class="btn-reserver" href="">Réserver</a>
+    <a class="btn-reserver" href="templates/reservationForm">Réserver</a>
 </div>

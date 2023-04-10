@@ -23,9 +23,4 @@
           </div>
         </div>
       </nav>
-      <div class="container-fluid" id="banner-img">
-        <div>
-          <img class="logoheader" src="<?= generateLink('assets/logo.png') ?>" alt="logo">
-        </div>
-    </div>
-      </header>
+</header>

@@ -27,7 +27,7 @@ footer{
     font-weight: 400;
     overflow: hidden;
 }
-.bi{
+.bi {
     color: white;
 }
 /*IMG NAV ACCUEIL*/
@@ -204,7 +204,7 @@ footer{
     background-color: rgba(169, 146, 125, 0.23);
     border-radius: 10px;
 }
-#btnconnexion{
+.btn.btnconnexion{
     background-color: #49111C;
     color: #F2F4F3;
     cursor: pointer;
@@ -213,7 +213,25 @@ footer{
     border-radius: 10px;
     box-shadow:  2px 2px 5px #0A0908;  
     transition: all 0.5s ease;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
+/*FORM RESERVATION*/
+#reservation{
+    background-color: #F2F4F3;
+    border-radius: 10px;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+    height: auto;
+}
+#people{
+    color: #0A0908;
+}
+
+
 /*MEDIA MOBILE*/
 @media screen and (min-width: 320px) and (max-width: 1223px) {
     /*NAV*/
@@ -296,14 +314,18 @@ footer{
         margin-top: 40px;
         margin-bottom: 40px;
     }
-    #btnconnexion{
+    .btn.btnconnexion{
         font-size: 14px;
         padding:10px;
     }
-    #btnconnexion:hover{
+    .btn.btnconnexion:hover{
         font-size: 12px;
         padding: 8px;
     }
+    #reservation{
+        width: 80%;
+    }
+ 
 }
 
 /*MEDIA PC*/
@@ -392,13 +414,17 @@ footer{
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    #btnconnexion{
+    .btn.btnconnexion{
         font-size: 16px;
         padding: 12px;
     }
-    #btnconnexion:hover{
+    .btn.btnconnexion:hover{
         font-size: 14px;
         padding: 10px;
     }
+    #reservation{
+        width: 50%;
+    }
+    
 }
 
