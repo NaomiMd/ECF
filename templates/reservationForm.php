@@ -49,11 +49,14 @@ compréhension.
   <label for=" " class="form-label">Nom</label>
   <input type="text" name="" class="form-control" id="exampleFormControlInput1" placeholder="Nom">
 </div>
-
-
-</form>
+<!-- endif -->
+<div class="mb-3">
+  <button type="submit" class="btn-confirm">Confirmer</button>
+  <a href="index.php" class="btn-retour">Retour</a>
 </div>
+</form>
 
+</div>
 </div> 
 
 
