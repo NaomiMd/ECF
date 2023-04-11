@@ -230,6 +230,30 @@ footer{
 #people{
     color: #0A0908;
 }
+.btn-confirm{
+    background-color: #49111C;
+    color: #F2F4F3;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    box-shadow:  2px 2px 5px #0A0908;  
+    transition: all 0.5s ease;
+    margin: 8px 0 10px 12px;
+}
+.btn-retour{
+    background-color: #0A0908;
+    color: #F2F4F3;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    box-shadow:  2px 2px 5px #0A0908;  
+    transition: all 0.5s ease;
+    margin: 8px 0 10px 15px;
+}
 
 
 /*MEDIA MOBILE*/
@@ -325,6 +349,23 @@ footer{
     #reservation{
         width: 80%;
     }
+    .btn-confirm{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .btn-retour{
+        font-size: 15px;
+        padding: 14px;
+    }
+    .btn-confirm:hover{
+        font-size: 12px;
+        padding: 8px;
+    }
+    .btn-retour:hover{
+        font-size: 12px;
+        padding: 12px;
+    }
+    
  
 }
 
@@ -387,12 +428,12 @@ footer{
         transform: scale(1.2);
     }
     .btn-reserver {
-    font-size: 20px;
-    padding: 18px;
+    font-size: 18px;
+    padding: 16px;
     }
     .btn-reserver:hover {
-    font-size: 18px;
-    padding: 15px;
+    font-size: 16px;
+    padding: 14px;
     }
     #titlemenu{
         font-size: 30px;
@@ -424,6 +465,22 @@ footer{
     }
     #reservation{
         width: 50%;
+    }
+    .btn-confirm{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .btn-retour{
+        font-size: 16px;
+        padding: 14px;
+    }
+    .btn-confirm:hover{
+        font-size: 14px;
+        padding: 8px;
+    }
+    .btn-retour:hover{
+        font-size: 14px;
+        padding: 12px;
     }
     
 }
