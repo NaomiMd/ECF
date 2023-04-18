@@ -8,17 +8,18 @@
             <div class="mx-auto"></div>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                <a class="nav-link" aria-current="page" href="<?= generateLink('index.php') ?>">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Galerie.html">Carte & Menu</a>
+                <a class="nav-link" href="<?= generateLink('carte.php') ?>">Carte & Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Tarifs.html">Réserver</a>
+                <a class="nav-link" href="<?= generateLink('reservation.php') ?>">Réserver</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-person-circle"></i></a>
+              <a class="nav-link" href="<?= generateLink('login.php') ?>"><i class="bi bi-person-circle"></i></a>
               </li>
+              
             </ul>
           </div>
         </div>

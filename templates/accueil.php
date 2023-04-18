@@ -1,6 +1,6 @@
 <div class="container-fluid" id="banner-img">
         <div>
-          <img class="logoheader" src="<?= generateLink('assets/logo.png') ?>" alt="logo">
+          <img class="logoheader" src="<?= generateLink('assets/img/logo.png') ?>" alt="logo">
         </div>
 </div>
 
@@ -26,14 +26,14 @@ voluptate velit, illo tempora neque quos asperiores et magni corporis perferendi
 </p>
 </div>
 <div class="restaurant">
-    <img src="<?= generateLink('assets/restaurant.jpg') ?>" alt="img" class="img-cuisine" >
+    <img src="<?= generateLink('assets/img/restaurant.jpg') ?>" alt="img" class="img-cuisine" >
   </div>
 </div>
 
 
 <div class="container-fluid cuisine">
 <div class="restaurant">
-    <img src="<?= generateLink('assets/chef1.jpg') ?>" alt="img" class="img-chef" >
+    <img src="<?= generateLink('assets/img/chef1.jpg') ?>" alt="img" class="img-chef" >
   </div>
   <div class="text">
     <h4 class="title">L'équipe</h4>
@@ -56,15 +56,15 @@ voluptate velit, illo tempora neque quos asperiores et magni corporis perferendi
 
 <div id="grid">
     <div class="grid-item">
-        <img src="assets/dessert1.jpg" alt="" class="grid-img">
+        <img src="<?= generateLink('assets/img/dessert1.jpg') ?>" alt="galerie" class="grid-img">
         <span class="img-title">Title</span>
     </div>
     <div class="grid-item">
-        <img src="assets/dessert1.jpg" alt=""  class="grid-img" >
+        <img src="<?= generateLink('assets/img/Plat1.jpg') ?>" alt="galerie"  class="grid-img" >
         <span class="img-title" >Title</span>
     </div>
     <div class="grid-item">
-        <img src="assets/dessert1.jpg" alt=""  class="grid-img" >
+        <img src="<?= generateLink('assets/img/Soupe.jpg') ?>" alt="galerie"  class="grid-img" >
         <span class="img-title" >Title</span>
     </div>
 </div>
@@ -72,5 +72,5 @@ voluptate velit, illo tempora neque quos asperiores et magni corporis perferendi
 <!-- RESERVER -->
 
 <div class="container-fluid button d-flex justify-content-center">
-    <a class="btn-reserver" href="templates/reservationForm">Réserver</a>
+    <a class="btn-reserver" href="<?= generateLink('reservation.php') ?>">Réserver</a>
 </div>

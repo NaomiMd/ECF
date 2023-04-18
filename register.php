@@ -6,7 +6,7 @@ require_once _ROOT_ . '\templates\navbar.php';
 ?>
 <div class="container-fluid" id="banner-login">
         <div>
-          <h1 class="pagetitle" >S'inscrire</h1>
+          <h1 class="pagetitle">S'inscrire</h1>
         </div>
 </div>
 </div>
@@ -44,9 +44,6 @@ require_once _ROOT_ . '\templates\navbar.php';
 </div>
 
 
-
-
 <?php
 require_once _ROOT_ . '\templates\footer.php';
-
 ?>

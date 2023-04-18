@@ -52,7 +52,7 @@ compréhension.
 <!-- endif -->
 <div class="mb-3">
   <button type="submit" class="btn-confirm">Confirmer</button>
-  <a href="index.php" class="btn-retour">Retour</a>
+  <a href="<?= generateLink('index.php') ?>" class="btn-retour">Retour</a>
 </div>
 </form>
 
