@@ -16,10 +16,19 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?= generateLink('reservation.php') ?>">Réserver</a>
               </li>
+              <!-- Seulement disponible quand un admin est connecté -->
+              <li class="nav-item">
+                <a class="nav-link" href="<?= generateLink('admin/home.php') ?>">Admin Panel</a>
+              </li>
+              <!-- Ne pas montrer si admin ou client co -->
+              <!-- pour se connecter-->
               <li class="nav-item">
               <a class="nav-link" href="<?= generateLink('login.php') ?>"><i class="bi bi-person-circle"></i></a>
               </li>
-              
+              <!-- à afficher seulement si user est co -->
+              <li class="nav-item">
+              <a class="nav-link" href="<?= generateLink('lougout.php') ?>">Se déconnecter</a>
+              </li>
             </ul>
           </div>
         </div>
