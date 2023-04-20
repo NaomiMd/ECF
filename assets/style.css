@@ -32,7 +32,7 @@ footer{
 }
 /*IMG NAV ACCUEIL*/
 #banner-img{
-    background-image: url("header-accueil.jpg");
+    background-image: url('img/header-accueil.jpg');
     background-repeat: no-repeat;
     background-position: 60% 40%;
     opacity: .9;
@@ -44,7 +44,7 @@ footer{
     align-items: center;
 }
 #banner-carte{
-    background-image: url("carteHeader.jpg");
+    background-image: url('img/carteHeader.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     opacity: .9;
@@ -56,7 +56,7 @@ footer{
     align-items: center;
 }
 #banner-login{
-    background-image: url("login.jpg");
+    background-image: url("img/login.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     opacity: .9;
@@ -255,9 +255,34 @@ footer{
     margin: 8px 0 10px 15px;
 }
 .text-center.homeadmin{
-    margin-top: 20%;
+    margin-top: 100px;
     font-family: 'Alegreya' sans-serif;
     font-weight: 500;
+}
+.btn.btnCreate{
+    color:#49111C;
+    border: none;
+}
+.btn.btnCreate:hover{
+    font-weight: 600;
+    border: none;
+}
+.btn.btnCard{
+    color:white;
+    background-color: #49111C;
+    margin: 5px;
+}
+.btn.btnCard:hover{
+    font-weight: 600;
+    border: none;
+}
+.container.cardCarte{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /*MEDIA MOBILE*/
@@ -368,6 +393,9 @@ footer{
     .btn-retour:hover{
         font-size: 12px;
         padding: 12px;
+    }
+    .text-center.p-2 > p{
+        font-size: 16px;
     }
     
  
@@ -485,6 +513,9 @@ footer{
     .btn-retour:hover{
         font-size: 14px;
         padding: 12px;
+    }
+    .text-center.p-2 > p{
+        font-size: 18px;
     }
     
 }
