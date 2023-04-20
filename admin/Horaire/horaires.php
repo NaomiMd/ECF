@@ -8,7 +8,9 @@ $hourController = new HourController();
 $hours = $hourController->getAll();
 $error = null;
 ?>
-
+<div class="text-center mt-5">
+  <h3>Horaires</h3>
+</div>
 <div class="container d-flex justify-content-center mt-5">
 <div class="card border-dark  mb-3" style="width: 18rem;">
   <div class="card-body">
