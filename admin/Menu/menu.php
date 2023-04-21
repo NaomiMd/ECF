@@ -31,14 +31,16 @@ $error = null;
         <p><?= $formule->getDescription(); ?></p>
         <p><?= $formule->getPrice(); ?>€</p>
         <a href="updateMenu.php?id=<?= $formule->getId(); ?>" class="btn btnCard" >Modifier</a>
+        <a href="deleteMenu.php?id=<?= $formule->getId(); ?>" class="btn btnCard" >Supprimer</a>
 
      </div>
   </div>
 </div>
 <?php endforeach; ?>
 </div>
-
-
+<div class="container text-center mt-4">
+<a href="addMenu.php" class="btn btnCard" >Ajouter une formule</a>
+</div>
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>
