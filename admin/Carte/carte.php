@@ -32,12 +32,17 @@ $error = null;
         <p><?= $dish->getPrice(); ?>€</p>
         <p><?= $category->getTitle(); ?></p>
         <a href="updateCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Modifier</a>
+        <a href="deleteCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Supprimer</a>
 
      </div>
   </div>
 </div>
 <?php endforeach; ?>
 </div>
+<div class="container text-center mb-5 py-5">
+  <a href="addCarte.php" class="btn btnCard">Ajouter un plat</a>
+</div>
+
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>
