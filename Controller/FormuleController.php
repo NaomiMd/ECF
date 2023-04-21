@@ -60,7 +60,7 @@ public function updateFormule(Formule $formule)
     $req->bindValue(":id", $formule->getId(), PDO::PARAM_INT);
     $req->bindValue(":description", $formule->getDescription(), PDO::PARAM_STR);
     $req->bindValue(":price", $formule->getPrice(), PDO::PARAM_STR);
-    $req->bindValue(":category_id", $formule->getMenu_id(), PDO::PARAM_INT);
+    $req->bindValue(":menu_id", $formule->getMenu_id(), PDO::PARAM_INT);
 
     $req->execute();
 }
