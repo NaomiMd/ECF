@@ -93,7 +93,7 @@ INSERT INTO category (id, title) VALUES (3, 'Dessert');
 
 INSERT INTO dish (id, title, description, price, category_id) VALUES (1, 'Salade savoyarde', 'Une salade garnie de lardon et fromage savoyard', 20, 1);
 INSERT INTO dish (id, title, description, price, category_id) VALUES (2, 'Soupe savoyarde', 'Une soupe de patate et potiron accompagné de lardon', 20, 1);
-INSERT INTO dish (id, title, description, price, category_id) VALUES (3, 'Gâteau au chocolat et poires', 'Un gâteau au chocolat et poires pochées au vin chaud', 40, 3);
+INSERT INTO dish (id, title, description, price, category_id) VALUES (3, 'Gâteau au chocolat et figues', 'Un gâteau au chocolat et figues pochées au vin chaud', 40, 3);
 INSERT INTO dish (id, title, description, price, category_id) VALUES (4, 'Périgord', 'Filet mignon de porc glacé au reblochon et navets confits', 60, 2);
 INSERT INTO dish (id, title, description, price, category_id) VALUES (5, 'Bruschetta ', 'Une bruschetta façon raclette', 70, 2);   
 INSERT INTO dish (id, title, description, price, category_id) VALUES (6, 'Bugnes de savoie', 'Un petit beignet frit que l’on mange traditionnellement le jour de mardi gras en Savoie', 30, 3);
@@ -102,7 +102,7 @@ INSERT INTO tables(id, limited_seats) VALUES (1, 50);
 
 INSERT INTO hour(id, opening_morning, closing_morning, opening_night, closing_night) VALUES (1, '12:00', '14:00', '19:00', '22:00');
 
-INSERT INTO galery(id, title, image) VALUES (1, 'title', 'Entrée1.jpg');
-INSERT INTO galery(id, title, image) VALUES (2, 'title', 'Entrée2.jpg');
-INSERT INTO galery(id, title, image) VALUES (3, 'title', 'dessert1.jpg');
-INSERT INTO galery(id, title, image) VALUES (4, 'title', 'Soupe.jpg');
+INSERT INTO galery(id, title, image) VALUES (1, 'title', 'https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+INSERT INTO galery(id, title, image) VALUES (2, 'Gâteau au chocolat et figues', 'https://images.unsplash.com/photo-1565592415402-1e5c0e0c0707?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80');
+INSERT INTO galery(id, title, image) VALUES (3, 'Salade Savoyarde', 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80');
+INSERT INTO galery(id, title, image) VALUES (4, 'Bruschetta', 'https://images.unsplash.com/photo-1629570585590-c17fae0839f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJydXNjaGV0dGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
