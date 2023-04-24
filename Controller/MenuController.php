@@ -47,20 +47,16 @@ public function getIdMenu($id): Menu
 
 public function createMenu(Menu $newMenu)
 {
-    $req = $this->pdo->prepare("INSERT INTO `menu` (title, description, price) VALUES (:title, :description, :price) ");
+    $req = $this->pdo->prepare("INSERT INTO `menu` (title) VALUES (:title) ");
     $req->bindValue(":title", $newMenu->getTitle(), PDO::PARAM_STR);
-    $req->bindValue(":description", $newMenu->getDescription(), PDO::PARAM_STR);
-    $req->bindValue(":price", $newMenu->getPrice(), PDO::PARAM_STR);
     $req->execute();
 }
 
 public function updateMenu(Menu $menu)
 {
-    $req = $this->pdo->prepare("UPDATE `menu` SET title=:title, description=:description, price=:price WHERE id=:id");
+    $req = $this->pdo->prepare("UPDATE `menu` SET title=:title WHERE id=:id");
     $req->bindValue(":id", $menu->getId(), PDO::PARAM_INT);
     $req->bindValue(":title", $menu->getTitle(), PDO::PARAM_STR);
-    $req->bindValue(":description", $menu->getDescription(), PDO::PARAM_STR);
-    $req->bindValue(":price", $menu->getPrice(), PDO::PARAM_STR);
 
     $req->execute();
 }
