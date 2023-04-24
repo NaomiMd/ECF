@@ -1,3 +1,10 @@
+<?php
+require_once _ROOT_ . '\Controller\GalerieController.php';
+
+$galerieController = new GalerieController();
+$galeries = $galerieController->getAll();
+
+?>
 <div class="container-fluid" id="banner-img">
         <div>
           <img class="logoheader" src="<?= generateLink('assets/img/logo.png') ?>" alt="logo">
@@ -55,18 +62,14 @@ voluptate velit, illo tempora neque quos asperiores et magni corporis perferendi
 <!-- GALERIE -->
 
 <div id="grid">
+    <?php
+    foreach($galeries as $galerie) : 
+    ?>
     <div class="grid-item">
-        <img src="<?= generateLink('assets/img/dessert1.jpg') ?>" alt="galerie" class="grid-img">
-        <span class="img-title">Title</span>
+        <img src="<?=  $galerie->getImage(); ?>" alt="galerie" class="grid-img">
+        <span class="img-title"><?= $galerie->getTitle(); ?></span>
     </div>
-    <div class="grid-item">
-        <img src="<?= generateLink('assets/img/Plat1.jpg') ?>" alt="galerie"  class="grid-img" >
-        <span class="img-title" >Title</span>
-    </div>
-    <div class="grid-item">
-        <img src="<?= generateLink('assets/img/Soupe.jpg') ?>" alt="galerie"  class="grid-img" >
-        <span class="img-title" >Title</span>
-    </div>
+    <?php endforeach ; ?>
 </div>
 
 <!-- RESERVER -->
