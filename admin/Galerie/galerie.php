@@ -19,7 +19,7 @@ $galeries = $galerieController->getAll();
     foreach($galeries as $galerie) :
     ?>
 <div class="card border-dark  mb-3" style="width: 18rem;">
-<img src="<?=  $galerie->getImage(); ?>" class="card-img-top" id="imageCard" alt="<?= $galerie->getTitle(); ?>">
+<img style="height: 25rem" src="<?=  $galerie->getImage(); ?>" class="card-img-top" id="imageCard" alt="<?= $galerie->getTitle(); ?>">
   <div class="card-body">
     <h5 class="card-title"></h5>
     <p><?= $galerie->getTitle(); ?></p>
