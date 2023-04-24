@@ -40,7 +40,7 @@ $error = null;
 <?php endforeach; ?>
 </div>
 <div class="container text-center mb-5 py-5">
-  <a href="addCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Ajouter un plat</a>
+  <a href="addCarte.php" class="btn btnCard">Ajouter un plat</a>
 </div>
 
 <?php 
