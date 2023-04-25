@@ -185,6 +185,7 @@ footer{
 }
 .italic{
     font-style: italic;
+    font-weight: 300;
 }
 .underline{
     height: 1px;
@@ -192,12 +193,6 @@ footer{
     margin-left: 46%;
     text-align: center;
     background-color:#5E503F;
-}
-.accordion.mt-5.mb-5{
-    padding: 0 20%;
-}
-.accordion-button:not(.collapsed){
-    background-color: #F2F4F3;
 }
 /*CONNEXION*/
 #connexionform{
@@ -284,7 +279,22 @@ footer{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
+.container.text-center{
+    padding-top: 15px;
+    margin-top: 20px;
+    border: 1px solid #5E503F;
+    width: 80vh;
+}
+.carteBox{
+    
+    text-align: left;
+    font-weight: 300;
+}
+.separateur{
+    color: #5E503F;
+    width: 50px;
+    text-align: center;
+}
 /*MEDIA MOBILE*/
 @media screen and (min-width: 320px) and (max-width: 1223px) {
     /*NAV*/
