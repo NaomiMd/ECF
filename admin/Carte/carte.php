@@ -3,9 +3,7 @@ require_once("../../config.php");
 require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\CategoryController.php';
-require_once _ROOT_ . '\Controller\FormuleController.php';
 require_once _ROOT_ . '\Controller\DishController.php';
-require_once _ROOT_ . '\Controller\MenuController.php';
 
 $CategoryController = new CategoryController();
 $DishController = new DishController();
@@ -18,7 +16,7 @@ $error = null;
   <h3>Carte</h3>
 </div>
 <div class="underline"></div>
-<div class="container cardCarte ">
+<div class="container cardCarte">
 <?php
     foreach($dishes as $dish) :
     $category = $CategoryController->getCategoryById($dish->getCategory_Id());
