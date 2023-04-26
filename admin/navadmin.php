@@ -15,7 +15,7 @@
         <a class="nav-link" href="<?= generateLink('admin/Menu/menu.php') ?>">Menu</a>
         <a class="nav-link" href="<?= generateLink('admin/Reservation/reservation.php') ?>">Réservation</a>
 <!-- renvoie à logout.php -->
-    <a class="nav-link" aria-current="page" href="logout.php">Se deconnecter</a>
+    <a class="nav-link" aria-current="page" href="<?= generateLink('logout.php') ?>">Se deconnecter</a>
       </div>
     </div>
   </div>
