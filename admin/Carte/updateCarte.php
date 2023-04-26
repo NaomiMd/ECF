@@ -5,6 +5,11 @@ require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\CategoryController.php';
 require_once _ROOT_ . '\Controller\DishController.php';
 
+if(!isset($_SESSION['admin']))
+{
+    header('location: login.php');
+}
+
 $CategoryController = new CategoryController();
 $categories = $CategoryController->getAll();
 

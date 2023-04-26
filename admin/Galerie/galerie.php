@@ -4,6 +4,11 @@ require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\GalerieController.php';
 
+if(!isset($_SESSION['admin']))
+{
+    header('location: login.php');
+}
+
 $galerieController = new GalerieController();
 $galeries = $galerieController->getAll();
 

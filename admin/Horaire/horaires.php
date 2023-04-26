@@ -4,6 +4,11 @@ require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\HourController.php';
 
+if(!isset($_SESSION['admin']))
+{
+    header('location: login.php');
+}
+
 $hourController = new HourController();
 $hours = $hourController->getAll();
 $error = null;

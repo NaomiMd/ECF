@@ -5,6 +5,10 @@ require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\FormuleController.php';
 require_once _ROOT_ . '\Controller\MenuController.php';
 
+if(!isset($_SESSION['admin']))
+{
+    header('location: login.php');
+}
 
 $FormuleController = new FormuleController();
 $formules = $FormuleController->getAll();
