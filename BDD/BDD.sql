@@ -55,6 +55,7 @@ CREATE TABLE reservation(
     number_of_guest INT NOT NULL,
     name VARCHAR(20) NOT NULL,
     allergy VARCHAR(100),
+    email VARCHAR(50) NOT NULL,
     user_id INT,
     FOREIGN KEY(user_id) REFERENCES user(id),
     table_id INT NOT NULL,
