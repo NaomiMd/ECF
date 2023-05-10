@@ -268,8 +268,8 @@ footer{
     background-color:#5E503F;
 }
 /*CONNEXION*/
-#connexionform{
-    background-color: rgba(169, 146, 125, 0.23);
+.connexionform{
+    background-color: #F2F4F3;
     border-radius: 10px;
 }
 .btn.btnconnexion{
@@ -468,7 +468,7 @@ footer{
     .menu{
         font-size: 16px;
     }
-    #connexionform{
+    .connexionform{
         width: 60%;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -608,7 +608,7 @@ footer{
     .container.text-center.mt-5{
         width: 30%;
     }
-    #connexionform{
+    .connexionform{
         width: 30%;
         margin-top: 50px;
         margin-bottom: 50px;

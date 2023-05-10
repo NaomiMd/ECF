@@ -16,12 +16,12 @@ $userController = new UserController();
 
 <?php 
 
-if($_POST)
+if(isset($_POST['login']))
 {
   if($_POST['password'] === $_POST['confirmPassword'])
   {
     unset($_POST['confirmPassword']);
-    $_POST['pasword'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $newUser = new User($_POST);
     $userController->createUser($newUser);
     $_SESSION['email'] = $_POST['email'];
@@ -33,7 +33,7 @@ if($_POST)
 
 ?>
 
-<div class="container" id="connexionform">
+<div class="container connexionform">
     <h3 class="text-center mt-4">S'inscrire</h3>
 
 <form method="post">
@@ -46,7 +46,7 @@ if($_POST)
 <input type="password" name="password" id="password" class="form-control" required >
 </div>
 <div class="mb-3">
-<label for="confirmPassword" class="form-label">Confirmer votre mot de passe</label>
+<label for="confirmPassword" class="form-label">Confirmez votre mot de passe</label>
 <input type="password" name="confirmPassword" id="password" class="form-control" required>
 </div>
 <div class="mb-3  ">
@@ -68,7 +68,7 @@ if($_POST)
 
 
 <div class="mb-3">
-<button type="submit" class="btn btnconnexion">S'inscrire</button>
+<button type="submit" name="login" class="btn btnconnexion">S'inscrire</button>
 </div>
 </form>
 </div>
