@@ -15,24 +15,35 @@ $error = null;
 ?>
 <div class="text-center mt-5">
   <h3>Horaires</h3>
+  <div class="underline"></div>
 </div>
-<div class="container d-flex justify-content-center mt-5">
-<div class="card border-dark  mb-3" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Horaires du quai antique</h5>
-    <?php
+
+<div class="container mt-5">
+<div class="table-responsive">
+<table class="table table-bordered" width="100%" cellspacing="0">
+  <thead>
+  <tr>
+    <th>Horaire d'ouverture déjeuner</th>
+    <th>Horaire de fermeture déjeuner</th>
+    <th>Horaire d'ouverture dîner</th>
+    <th>Horaire de fermeture dîner</th>
+    <th>Opération</th>
+  </tr>
+</thead>
+<tbody>
+<?php
     foreach($hours as $hour) :
-    ?>
-    <div class="text-center">
-    <p><?= $hour->getOpening_morning(); ?></p>
-    <p><?= $hour->getClosing_morning(); ?></p>
-    <p><?= $hour->getOpening_night(); ?></p>
-    <p><?= $hour->getClosing_night(); ?></p>
-    
-    <a href="updateHoraire.php?id=<?= $hour->getId(); ?>" class="btn btnCard" >Modifier</a>
-    </div>
-  </div>
-  <?php endforeach; ?>
+?>
+  <tr>
+    <th><?= $hour->getOpening_morning(); ?></th>
+    <th><?= $hour->getClosing_morning(); ?></th>
+    <th><?= $hour->getOpening_night(); ?></th>
+    <th><?= $hour->getClosing_night(); ?></th>
+    <th><a href="updateHoraire.php?id=<?= $hour->getId(); ?>" class="btn btnCard" >Modifier</a></th>
+  </tr>
+<?php endforeach; ?>
+</tbody>
+</table>
 </div>
 </div>
 
