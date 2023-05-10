@@ -12,6 +12,8 @@ body{
 /* NAV */
 .nav-link{
     font-weight: 400;
+    padding: 20px;
+    margin-left: 10px;
     color: white;
     display: flex;
     justify-content: flex-end;
@@ -34,7 +36,7 @@ footer{
 #banner-img{
     background-image: url('img/header-accueil.jpg');
     background-repeat: no-repeat;
-    background-position: 60% 40%;
+    background-position: 65% 35% ;
     opacity: .9;
     background-size: cover;
     background-color: #5E503F;
@@ -50,7 +52,7 @@ footer{
     opacity: .9;
     background-size: cover;
     background-color: #5E503F;
-    height: 90vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,19 +71,47 @@ footer{
 }
 /*LOGO*/
 .logoheader{
-    width: 300px;
+    width: 200px;
 }
 /*ACCUEIL*/
 #presentation{
-    background-color: rgba(169, 147, 126, 0.4);
-    color: #0A0908;
-    font-weight: 400;
+    font-family: 'Alegreya', 'sans serif';
+    background-color: rgb(242, 244, 243, 0.20);
+    margin-bottom: 10px;
 }
-.title{
+#presentation h2{
+    color: #A9927D;
+    text-transform: uppercase;
+    overflow: hidden;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+#presentation h4{
+    color: #0A0908;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.highlight{
+    height: 2px;
+    width: 15%;
+    margin-left: 42%;
+    text-align: center;
+    background-color: #A9927D;
+}
+.text h2{
+    font-family: 'Alegreya', sans-serif;
+    color: #A9927D;
+    font-weight: 600;
+    overflow: hidden;
+    line-height: 1.4em;
+} 
+.text h4{
     font-family: 'Alegreya', sans-serif;
     font-weight: 500;
     overflow: hidden;
-} 
+    line-height: 1.4em;
+}
 .line{
     height: 1px;
     width: 20%;
@@ -90,16 +120,52 @@ footer{
     background-color: #5E503F;
 }
 
-.container-fluid.cuisine{ 
-        background-color: rgba(242, 244, 243, 0.1);
-        padding: 0;
+.text p{
+    color: #0A0908;
+    text-align: unset;
+    margin-top: 40px;
+    letter-spacing: 0.4px;
+    line-height: 1.8em;
+    word-break: break-word;
+    font-weight: 300;
 }
-.text{
-    text-align: center;
+.verticalLeft{
+    border-left: 1px solid #A9927D;
+    font-weight: 400;
+    background-color: rgba(242, 244, 243, 0.1);
 }
+.verticalRight{
+    background-color: rgb(242, 244, 243, 0.1);
+}
+.verticalLeft p{
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.horizontalLeft{
+    border-bottom: 1px solid #A9927D;
+}
+.carteTitle{
+    font-family: 'Alegreya', 'sans serif';
+    font-weight: 500;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.carteBtn{
+    background-color: #49111C;
+    color: #F2F4F3;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    box-shadow:  1px 1px 2px #0A0908;  
+    transition: all 0.5s ease;
+    margin: 10px 0 10px 12px;
+}
+
 /*BUTTON*/
 .container-fluid.button{
-    background-color: rgba(169, 147, 126, 0.1);
     padding: 50px;
 }
 .btn-reserver {
@@ -108,15 +174,22 @@ footer{
     font-weight: 500;
     background-color: #49111C;
     color: white;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow:  2px 2px 5px #0A0908;  
     transition: all 0.5s ease;
 }
 
-/*SLIDER*/
+/*GALERIE*/
+#galerie{
+    margin-top: 60px;
+    padding: 30px 0;
+    background-color: rgb(242, 244, 243,0.2);
+    font-family: 'Alegreya', 'sans serif';
+    font-weight: 500;
+}
 #grid{
     position: relative;
-    background-color: rgba(169, 147, 126, 0.1);
+    background-color: rgb(242, 244, 243,0.2);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-auto-rows: 350px;
@@ -205,7 +278,7 @@ footer{
     cursor: pointer;
     text-decoration: none;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow:  2px 2px 5px #0A0908;  
     transition: all 0.5s ease;
     margin-top: 5px;
@@ -232,7 +305,7 @@ footer{
     text-decoration: none;
     font-weight: 500;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow:  2px 2px 5px #0A0908;  
     transition: all 0.5s ease;
     margin: 8px 0 10px 12px;
@@ -244,7 +317,7 @@ footer{
     text-decoration: none;
     font-weight: 500;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow:  2px 2px 5px #0A0908;  
     transition: all 0.5s ease;
     margin: 8px 0 10px 15px;
@@ -286,7 +359,6 @@ footer{
     width: 80vh;
 }
 .carteBox{
-    
     text-align: left;
     font-weight: 300;
 }
@@ -295,11 +367,17 @@ footer{
     width: 50px;
     text-align: center;
 }
+.bi-calendar4-week{
+    color: #0A0908;
+}
+.bi-clock{
+    color: #0A0908;
+}
 /*MEDIA MOBILE*/
 @media screen and (min-width: 320px) and (max-width: 1223px) {
     /*NAV*/
     .nav-link{
-        font-size: 15px;
+        font-size: 16px;
     }
     .nav-item{
         font-size: 15px;
@@ -311,7 +389,7 @@ footer{
     .logo-footer{
         position: absolute;
         left: 155px;
-        width: 160px;
+        width: 90px;
     }
     /*ACCUEIL*/
     #presentation{
@@ -319,19 +397,29 @@ footer{
         padding-bottom: 30px;
         font-size: 15px;
     }
-    .container-fluid.cuisine{ 
+    .cuisine{ 
         display: flex;
-       flex-direction: column;
+        flex-direction: column;
     }
-    .title{
+    #presentation{
         font-size: 25px;
         padding-top: 5%;
     }
-    .text p{
+    .text{
         font-size: 16px;
         padding: 10px 20px 40px;
         text-align: center;
-        margin: 0 50px;
+        margin: 15px 50px;
+    }
+    .verticalLeft{
+        height: 200px;
+    }
+    .verticalLeft p{
+        font-size: 15px;
+        padding: 30px 5px;
+    }
+    .horizontalLeft{
+        width: 120px;
     }
     .img-cuisine{
         width: 100%;
@@ -341,6 +429,14 @@ footer{
     .img-chef{
         width: 100%;
         height: auto;
+    }
+    .carteBtn{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .carteBtn:hover{
+        font-size: 14px;
+        padding: 8px;
     }
     .btn-reserver {
         font-size: 18px;
@@ -383,7 +479,6 @@ footer{
     }
     .btn.btnconnexion:hover{
         font-size: 12px;
-        padding: 8px;
     }
     #reservation{
         width: 80%;
@@ -407,15 +502,13 @@ footer{
     .text-center.p-2 > p{
         font-size: 16px;
     }
-    
- 
 }
 
 /*MEDIA PC*/
 @media screen and (min-width: 1224px) {
     /*NAV*/
     .nav-link{
-        font-size: 16px;
+        font-size: 20px;
     }
     .nav-item{
         font-size: 16px;
@@ -427,38 +520,55 @@ footer{
     .logo-footer{
         position: absolute;
         left: 200px;
-        width: 200px;
+        width: 100px;
     }
     /*ACCUEIL*/
     #presentation{
-        padding-top: 100px;
+        padding-top: 80px;
         padding-bottom: 100px;
         font-size: 18px;
-
     }
-    .container-fluid.cuisine{ 
+    .cuisine{ 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
     .title{
         font-size: 35px;
-        padding-top: 20%;
+        padding-top: 10%;
+    }
+    .text{
+        margin-left: 20px;
+        margin-top: 180px;
+        padding: 35px 100px;
+        text-align: center;
     }
     .text p{
-        margin-left: 20px;
-        padding: 35px 100px;
         font-size: 18px;
-        text-align: center;
+    }
+    .verticalLeft{
+        height: 100px;
+    }
+    .verticalLeft p{
+        font-size: 18px;
+        padding: 5px 0;
+    }
+    .horizontalLeft{
+        width: 300px;
+    }
+    .cuisine{
+        padding: 0;
     }
     .img-cuisine{
         width: 100%;
         height: auto;
-        padding-top: 20px;
+        padding-top: 140px;
       
     }
     .img-chef{
-        width: 100%;
+        width: 95%;
         height: 90%;
+        max-width: 100%;
+        display: block;
         padding-bottom: 20px;
         padding-top: 30px;
     }
@@ -469,13 +579,19 @@ footer{
     .grid-img:hover{
         transform: scale(1.2);
     }
+    .carteBtn{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .carteBtn:hover{
+        font-size: 15px;
+    }
     .btn-reserver {
     font-size: 18px;
-    padding: 16px;
+    padding: 12px;
     }
     .btn-reserver:hover {
     font-size: 16px;
-    padding: 14px;
     }
     #titlemenu{
         font-size: 30px;

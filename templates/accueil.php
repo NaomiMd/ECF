@@ -7,61 +7,77 @@ $galeries = $galerieController->getAll();
 ?>
 <div class="container-fluid" id="banner-img">
         <div>
-          <img class="logoheader" src="<?= generateLink('assets/img/logo.png') ?>" alt="logo">
+          <img class="logoheader" src="<?= generateLink('assets/img/logo.svg') ?>" alt="logo">
         </div>
 </div>
 
 
 <div class="container-fluid text-center" id="presentation" >
-    <p>
-Inspiré par les saveurs savoyardes, le chef Arnaud Michant vous partage
-ses nouvelles créations à travers des plats gastronomiques.<br/>
-Le Quai Antique vous propose au déjeuner
-comme au dîner une expérience gastronomique, à travers une cuisine sans artifice.
-    </p>
+    <h2>restaurant gastronomique à chambéry</h2>
+    <h4>Distingué de 2 étoiles au Guide Michelin</h4>
+    <div class="highlight" ></div>
 </div>
+<!-- présentation du chef -->
 
 <div class="container-fluid cuisine">
-    <div class="text">
-    <h4 class="title">Une cuisine réconfortante </h4>
-    <div class="line" ></div>
+<div>
+    <img src="<?= generateLink('assets/img/chef.jpg') ?>" alt="Le chef Arthur Michant" class="img-chef" >
+  </div>
+  <div class="text">
+    <h2>Le Chef</h2>
+    <h4>Arthur Michant</h4>
+    <div class="highlight"></div>
     <p>
-    Nos chefs explorent les classiques de la gastronomie savoyarde pour les remettre au goût du jour.<br/>
-    Ainsi, la cuisine que nous proposons offre le réconfort des produits de savoie.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet consectetur reprehenderit perspiciatis, 
-voluptate velit, illo tempora neque quos asperiores et magni corporis perferendis totam, quod rem? Fugit dicta expedita optio?
+    Le chef Arnaud Michant vous invite à découvrir une cuisine 
+    remplie de saveur inspiré de la Savoie.<br>
+    Sa passion pour la cuisine a commencé dès son plus jeune âge, 
+    lorsqu'il aidait sa grand-mère à préparer des plats traditionnels 
+    à base de produits frais et locaux. <br/>
+    Sa philosophie de cuisine est de mettre en valeur les ingrédients 
+    locaux et de saison, en utilisant des techniques modernes pour créer des plats innovants et savoureux. <br/>
+    Son talent et sa créativité ont été récompensés par de nombreux 
+    prix prestigieux dans l'industrie culinaire.
+    </p>
+</div>
+</div>
+
+<div class="container text-center">
+    <div class="verticalRight">
+    <h3 class="carteTitle" >Découvrez la carte</h3>
+    </div>
+<div class="verticalLeft">
+<p>Notre Chef vous convie à partager sa cuisine et ses nouvelles créations pour le déjeuner et dîner.</p>
+<a href="<?= generateLink('carte.php')?>" class="carteBtn" >Carte & Menu</a>
+</div>
+<div class="horizontalLeft"></div>
+</div>
+
+
+
+<div class="container-fluid cuisine" id="team">
+    <div class="text">
+    <h4 >L'équipe</h4>
+    <div class="highlight"></div>
+    <p>
+    Notre équipe est composée de passionnés de la gastronomie, qui travaillent ensemble pour offrir une expérience culinaire de classe mondiale à nos clients. <br/>
+    Chaque membre de notre équipe apporte une expertise unique, créant une atmosphère dynamique et collaborative dans notre restaurant. <br/>
+    Notre personnel de service est également une partie essentielle de notre équipe, offrant un service attentionné et professionnel à nos clients. <br/>
+    Ils sont formés pour répondre aux besoins et aux demandes spécifiques de nos clients, offrant une expérience personnalisée et mémorable.
 </p>
 </div>
 <div class="restaurant">
-    <img src="<?= generateLink('assets/img/restaurant.jpg') ?>" alt="img" class="img-cuisine" >
+    <img src="<?= generateLink('assets/img/equipe.jpg') ?>" alt="img" class="img-cuisine" >
   </div>
-</div>
-
-
-<div class="container-fluid cuisine">
-<div class="restaurant">
-    <img src="<?= generateLink('assets/img/chef1.jpg') ?>" alt="img" class="img-chef" >
-  </div>
-  <div class="text">
-    <h4 class="title">L'équipe</h4>
-    <div class="line"></div>
-    <p>
-    L'équipe au sein de notre restaurant
-    tant en cuisine qu'en salle
-    s'efforce de donner le 
-    meilleur d'elle-même chaque jour
-    pour vous permettre de vivre 
-    la meilleure expérience gastronomique
-    possible.<br/>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>
-    Quam obcaecati placeat delectus, sunt eaque culpa numquam ut ab cumque voluptas ipsa nostrum corrupti rem labore repellendus dolorum impedit neque! Repellat.
-    </p>
-</div>
 </div>
 
 <!-- GALERIE -->
 
+<div class="container text-center" id="galerie" >
+    <h3>Galerie</h3>
+</div>
+
 <div id="grid">
+    
     <?php
     foreach($galeries as $galerie) : 
     ?>
