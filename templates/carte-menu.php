@@ -53,7 +53,7 @@ foreach($formules as $formule) :
     ?>
 
 <div class="block">
-<div class="container text-center" id="carteShow" >
+<div class="container text-center" id="carteShow">
     <h5 class="menuTitle"><?= $category->getTitle(); ?></h5>
     <div class="line"></div>
     <?php foreach($dishes as $dish) : ?>

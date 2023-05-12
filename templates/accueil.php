@@ -7,7 +7,7 @@ $galeries = $galerieController->getAll();
 ?>
 <div class="container-fluid" id="banner-img">
         <div>
-          <img class="logoheader" src="<?= generateLink('assets/img/logo.svg') ?>" alt="logo">
+          <img class="logoheader" src="<?= generateLink('assets/img/logo.png') ?>" alt="logo">
         </div>
 </div>
 
