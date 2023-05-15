@@ -76,7 +76,7 @@ CREATE TABLE galery(
     image VARCHAR(255) NOT NULL
 )ENGINE=INNODB;
 
-INSERT INTO admin (id, email, password, role) VALUES (1, 'varicheBorn@admin.com','$2y$10$OCl8fTzeNfJ5OshfWrgMMOC5cVIppOJbQUSFlO.d6K9S18Q28Fjo2', 'admin');
+INSERT INTO admin (id, email, password, role) VALUES (1, 'varicheBorn@admin.com','$2y$10$Tg6hXUY.b9MErRFi.lGmT.bsBS7h21FiupCH8/n9Q0XAwzrkIKn8W', 'admin');
 INSERT INTO admin (id, email, password, role) VALUES (2, 'dallassmalles@exemple.com','$2y$10$CtSPxdGrQWinbiblpstf1eUOaB2SjgjNK3TxHHIVABV1pxCo1tYIK', 'admin');
 
 INSERT INTO user (id, email, password, allergy, number_of_guest, role) VALUES (1, 'saulcheales@exemple.com', '$2y$10$PbMuts3xbXJP2lfn0ZTML.6LdU5uGcyZqH/ck3ws2ltA.HWxrQanC', 'poisson', '2', 'subscriber');
@@ -101,6 +101,9 @@ INSERT INTO dish (id, title, description, price, category_id) VALUES (5, 'Brusch
 INSERT INTO dish (id, title, description, price, category_id) VALUES (6, 'Bugnes de savoie', 'Un petit beignet frit que l’on mange traditionnellement le jour de mardi gras en Savoie', 30, 3);
 
 INSERT INTO tables(id, limited_seats) VALUES (1, 50);
+
+INSERT INTO reservation(id, date, hour, number_of_guest, name, allergy, email,user_id, table_id) VALUES (1, '2023-05-16', '12:00:00', 2, 'Mickerlson', 'poisson', 'Micher@gmail.com', NULL, NULL);
+INSERT INTO reservation(id, date, hour, number_of_guest, name, allergy, email,user_id, table_id) VALUES (1, '2023-05-24', '19:00:00', 6, 'Klar', 'fruit de mer', 'Klar@gmail.com', NULL, NULL);
 
 INSERT INTO hour(id, opening_morning, closing_morning, opening_night, closing_night) VALUES (1, '12:00', '14:00', '19:00', '22:00');
 
