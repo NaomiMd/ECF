@@ -7,7 +7,7 @@ class User
     private $password;
     private $allergy;
     private $number_of_guest;
-    private $role = 'subscriber';
+    private $role;
 
     public function __construct(array $data)
     {
