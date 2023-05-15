@@ -21,10 +21,8 @@ if(isset($_POST['login']))
   if($_POST['password'] === $_POST['confirmPassword'])
   {
     unset($_POST['confirmPassword']);
-    $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $newUser = new User($_POST);
     $userController->createUser($newUser);
-    $_SESSION['user']['email'] = $_POST['email'];
     echo"<script>window.location.href='index.php'</script>";
   }else{
     echo"<h5 class='text-center'>Le mot de passe ne correspond pas à celui entré</h5>";
