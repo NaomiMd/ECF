@@ -4,24 +4,19 @@ require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\CategoryController.php';
 require_once _ROOT_ . '\Controller\DishController.php';
-
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $CategoryController = new CategoryController();
 $DishController = new DishController();
 $dishes = $DishController->getAll();
-
-
 $error = null;
 ?>
 <div class="text-center mt-5">
   <h3>Carte</h3>
 </div>
 <div class="underline"></div>
-
 <div class="container mt-5">
 <div class="table-responsive">
 <table class="table table-bordered" width="100%" cellspacing="0">
@@ -58,7 +53,6 @@ $error = null;
 <div class="container text-center mb-5 py-5">
   <a href="addCarte.php" class="btn btnCard">Ajouter un plat</a>
 </div>
-
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>

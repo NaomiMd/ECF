@@ -4,27 +4,20 @@ require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\FormuleController.php';
 require_once _ROOT_ . '\Controller\MenuController.php';
-
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $MenuController= new MenuController();
 $menus = $MenuController->getAll();
-
 $FormuleController = new FormuleController();
-
 if($_POST)
 {
     $newFormule = new Formule($_POST);
     $FormuleController->createFormule($newFormule);
     echo"<script>window.location.href='./menu.php'</script>";
 }
-
 ?>
-
-
 <h3 class="text-center mt-5">Ajouter une formule</h3>
 <div class="container d-flex justify-content-center mt-5">
 <form method="post">
@@ -47,10 +40,7 @@ if($_POST)
     <button type="submit" class="btn btnCard">Ajouter</button>
 </div>
 </form>
-
 </div>
-
-
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>

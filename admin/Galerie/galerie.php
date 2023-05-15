@@ -3,23 +3,17 @@ require_once("../../config.php");
 require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\GalerieController.php';
-
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $galerieController = new GalerieController();
 $galeries = $galerieController->getAll();
-
-
 ?>
 <div class="text-center mt-5">
   <h3>Galerie</h3>
 </div>
 <div class="underline"></div>
-
-
 <div class="container mt-5">
   <div class="table-responsive">
     <table class="table table-bordered">
@@ -49,12 +43,10 @@ $galeries = $galerieController->getAll();
     </table>
   </div>
 </div>
-
 </div>
 <div class="container text-center mb-5 py-5">
   <a href="addGalerie.php" class="btn btnCard">Ajouter une image</a>
 </div>
-
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>

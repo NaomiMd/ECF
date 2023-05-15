@@ -5,31 +5,24 @@ require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\FormuleController.php';
 require_once _ROOT_ . '\Controller\MenuController.php';
 
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $FormuleController = new FormuleController();
 $formule = $FormuleController->getIdFormule($_GET['id']);
-
 $MenuController = new MenuController();
 $menus = $MenuController->getAll();
-
 if($_POST)
 {
     $formule->hydrate($_POST);
     $FormuleController->updateFormule($formule);
     echo"<script>window.location.href='./menu.php'</script>";
 }
-
 ?>
-
-
 <h3 class="text-center mt-5">Modifier le menu </h3>
 <div class="container d-flex justify-content-center mt-5">
 <form method="post">
-
     <label class="form-label mt-4" for="description">Description</label>
     <textarea class="form-control" name="description" cols="30" rows="10" required ><?= $formule->getDescription();  ?></textarea>
 
@@ -43,15 +36,11 @@ if($_POST)
     <option <?= $menu->getId() === $formule->getMenu_id() ? "selected" : "" ?> value="<?= $menu->getId(); ?>"><?= $menu->getTitle(); ?></option>
    <?php endforeach ; ?>
 </select>
-
 <div class="container text-center mt-3">
     <button type="submit" class="btn btnCard">Modifier</button>
 </div>
 </form>
-
 </div>
-
-
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>

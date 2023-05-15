@@ -4,25 +4,19 @@ require_once _ROOT_ . '\templates\header.php';
 require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\FormuleController.php';
 require_once _ROOT_ . '\Controller\MenuController.php';
-
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $FormuleController = new FormuleController();
 $formules = $FormuleController->getAll();
-
 $MenuController = new MenuController();
-
-
 $error = null;
 ?>
 <div class="text-center mt-5">
   <h3>Menu</h3>
 </div>
 <div class="underline"></div>
-
 <div class="container mt-5">
 <div class="table-responsive">
   <table class="table table-bordered" width="100%" cellspacing="0">
@@ -53,7 +47,6 @@ $error = null;
   </table>
 </div>
 </div>
-
 <div class="container text-center mt-4">
 <a href="addMenu.php" class="btn btnCard" >Ajouter une formule</a>
 </div>

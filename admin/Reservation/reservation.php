@@ -5,19 +5,10 @@ require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\ReservationController.php';
 require_once _ROOT_ . '\Controller\UserController.php';
 require_once _ROOT_ . '\Controller\TableController.php';
-
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
-if(isset($_GET['page']) && !empty($_GET['page']))
-{
-  $currentPage = (int) strip_tags($_GET['page']);
-}else{
-  $currentPage = 1;
-}
-
 $reservationController = new ReservationController();
 $reservations = $reservationController->getAll();
 $tableController = new TableController();

@@ -5,26 +5,21 @@ require_once _ROOT_ . '\admin\navadmin.php';
 require_once _ROOT_ . '\Controller\ReservationController.php';
 require_once _ROOT_ . '\Controller\UserController.php';
 
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $userController = new UserController();
 $users = $userController->getAll();
-
 $reservationController = new ReservationController();
 $reservation = $reservationController->getReservationId($_GET['id']);
-
 if($_POST)
 {
     $reservation->hydrate($_POST);
     $reservationController->updateReservation($reservation);
     echo "<script>window.location.href='./reservation.php'</script>";
 }
-
 ?>
-
 <h3 class="text-center mt-5">Modifier la réservation</h3>
 <div class="container d-flex justify-content-center mt-5">
 <form method="post">
@@ -50,15 +45,11 @@ if($_POST)
             <option value="<?= $user->getId() ?>"><?= $user->getEmail(); ?></option>
     <?php endforeach ; ?>   
     </select>
-
-
 <div class="container text-center mt-3 mb-5">
     <button type="submit" class="btn btnCard">Modifier</button>
 </div>
 </form>
-
 </div>
-
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>

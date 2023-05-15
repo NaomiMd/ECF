@@ -3,25 +3,19 @@ require_once("../../config.php");
 require_once _ROOT_ . '/templates/header.php';
 require_once _ROOT_ . '/admin/navadmin.php';
 require_once _ROOT_ . '/Controller/HourController.php';
-
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']['email']))
 {
     header('location: login.php');
 }
-
 $hourController = new HourController();
 $hour = $hourController->getHourbyId($_GET['id']);
-
 if(($_POST))
 {
-
     $hour->hydrate(($_POST));
     $hourController->updateHour($hour);
     echo "<script>window.location.href='./horaires.php'</script>";
 }
-
 ?>
-
 <h3 class="text-center mt-5">Modifier les horaires du restaurant</h3>
 <p class="text-center italic" >Merci de taper les horaires voulues</p>
 <div class="container d-flex justify-content-center mt-5">
@@ -38,9 +32,7 @@ if(($_POST))
     <button type="submit" class="btn btnCard">Modifier</button>
 </div>
 </form>
-
 </div>
-
 <?php 
 require_once _ROOT_ . '\admin\footer.php';
 ?>
