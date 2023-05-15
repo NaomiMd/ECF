@@ -5,11 +5,11 @@ require_once _ROOT_ . '\templates\navbar.php';
 require_once _ROOT_ . '\Controller\UserController.php';
 require_once _ROOT_ . '\Controller\AdminController.php';
 
-if(isset($_SESSION['email']))
+if(isset($_SESSION['user']['email']))
 {
   header('location: index.php');
 }
-if(isset($_SESSION['admin']))
+if(isset($_SESSION['admin']['email']))
 {
   header('location: index.php');
 }
@@ -22,7 +22,7 @@ var_dump(empty($_SESSION));
 
 <div class="container-fluid" id="banner-login">
         <div>
-          <h1 class="pagetitle" >Se connecter</h1>
+          <h1 class="pagetitle">Se connecter</h1>
         </div>
 </div>
 </div>
@@ -35,11 +35,11 @@ if($_POST)
 
   if($user)
   {
-    $_SESSION['email'] = ['email' => $user['email']];
+    $_SESSION['user']['email'] = ['email' => $user['email']];
     header('location: index.php');
   }elseif($admin)
   {
-    $_SESSION['admin'] = ['email' => $admin['email']];
+    $_SESSION['admin']['email'] = ['email' => $admin['email']];
     header('location: index.php');
   }else{
     echo '<h3 class="text-center mt-3" style="color:red" >Identifiants invalides</h3>';
