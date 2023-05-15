@@ -17,18 +17,26 @@
                 <a class="nav-link" href="<?= generateLink('reservation.php') ?>">Réserver</a>
               </li>
               <!-- Seulement disponible quand un admin est connecté -->
-              <li class="nav-item">
-                <a class="nav-link" href="<?= generateLink('admin/home.php') ?>">Admin Panel</a>
-              </li>
-              <!-- Ne pas montrer si admin ou client co -->
-              <!-- pour se connecter-->
+              <?php if(isset($_SESSION['admin'])  ) {?>
+                 <li class="nav-item">
+                            <a class="nav-link" href="<?= generateLink('admin/home.php') ?>">Dashboard</a>
+                        </li>
+             <?php } ?>
+             
+               <?php if(!isset($_SESSION['email']))  {?>
+                <?php if(empty($_SESSION['admin']))  {?>
+              <!-- Ne pas montrer si admin ou client co --> 
               <li class="nav-item">
               <a class="nav-link" href="<?= generateLink('login.php') ?>"><i class="bi bi-person-circle"></i></a>
               </li>
+
+              <?php }} else {?>
               <!-- à afficher seulement si user est co -->
               <li class="nav-item">
-              <a class="nav-link" href="<?= generateLink('lougout.php') ?>">Se déconnecter</a>
-              </li>
+              <a class="nav-link" href="<?= generateLink('logout.php') ?>">Se déconnecter</a>
+              </li>   
+              <?php } ?>  
+
             </ul>
           </div>
         </div>
