@@ -47,7 +47,7 @@ if($_POST)
    <?php endforeach ; ?>
 </select>
 
-<div class="container text-center mt-3">
+<div class="container text-center mt-3 mb-5">
     <button type="submit" class="btn btnCard">Modifier</button>
 </div>
 </form>

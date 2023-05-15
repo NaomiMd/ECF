@@ -19,20 +19,37 @@ $galeries = $galerieController->getAll();
 </div>
 <div class="underline"></div>
 
-<div class="container cardCarte">
-    <?php
-    foreach($galeries as $galerie) :
-    ?>
-<div class="card border-dark  mb-3" style="width: 18rem;">
-<img style="height: 25rem" src="<?=  $galerie->getImage(); ?>" class="card-img-top" id="imageCard" alt="<?= $galerie->getTitle(); ?>">
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <p><?= $galerie->getTitle(); ?></p>
-    <a href="updateGalerie.php?id=<?=$galerie->getId() ;?>" class="btn btnCard">Modifier</a>
-    <a href="deleteGalerie.php?id=<?=$galerie->getId();?>" class="btn btnCard">Supprimer</a>
+
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Url de l'image</th>
+          <th>Visuel de l'image</th>
+          <th>Opérations</th>
+        </tr>
+      </thead>
+      <?php
+      foreach($galeries as $galerie) :
+      ?>
+      <tbody>
+        <tr>
+          <th><?= $galerie->getTitle();?></th>
+          <th><?=  $galerie->getImage();?></th>
+          <th><img src="<?=  $galerie->getImage();?>" alt="<?= $galerie->getTitle();?>"  width="200"></th>
+          <th>    
+          <a href="updateGalerie.php?id=<?=$galerie->getId() ;?>" class="btn btnCard">Modifier</a>
+          <a href="deleteGalerie.php?id=<?=$galerie->getId();?>" class="btn btnCard">Supprimer</a>
+        </th>
+        </tr>
+      </tbody>
+      <?php endforeach; ?>
+    </table>
   </div>
 </div>
-<?php endforeach; ?>
+
 </div>
 <div class="container text-center mb-5 py-5">
   <a href="addGalerie.php" class="btn btnCard">Ajouter une image</a>

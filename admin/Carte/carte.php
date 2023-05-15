@@ -21,26 +21,39 @@ $error = null;
   <h3>Carte</h3>
 </div>
 <div class="underline"></div>
-<div class="container cardCarte">
+
+<div class="container mt-5">
+<div class="table-responsive">
+<table class="table table-bordered" width="100%" cellspacing="0">
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Titre</th>
+    <th>Description</th>
+    <th>Prix</th>
+    <th>Catégorie</th>
+    <th>Opération</th>
+
+  </tr>
+</thead>
 <?php
     foreach($dishes as $dish) :
     $category = $CategoryController->getCategoryById($dish->getCategory_Id());
-?>   
-<div class="card border-dark  mb-3" style="width: 18rem;">
-  <div class="card-body">
-     <div class="text-center p-2">
-        <h5><?= $dish->getTitle(); ?></h5>
-        <hr>
-        <p><?= $dish->getDescription(); ?></p>
-        <p><?= $dish->getPrice(); ?>€</p>
-        <p><?= $category->getTitle(); ?></p>
-        <a href="updateCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Modifier</a>
-        <a href="deleteCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Supprimer</a>
-
-     </div>
-  </div>
-</div>
+?>  
+<tbody>
+  <tr>
+    <th><?= $dish->getId(); ?></th>
+    <th><?= $dish->getTitle(); ?></th>
+    <th><?= $dish->getDescription(); ?></th>
+    <th><?= $dish->getPrice(); ?>€</th>
+    <th><?= $category->getTitle(); ?></th>
+    <th><a href="updateCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Modifier</a>
+        <a href="deleteCarte.php?id=<?= $dish->getId(); ?>" class="btn btnCard">Supprimer</a></th>
+  </tr>
+</tbody>
 <?php endforeach; ?>
+</table>
+</div>
 </div>
 <div class="container text-center mb-5 py-5">
   <a href="addCarte.php" class="btn btnCard">Ajouter un plat</a>

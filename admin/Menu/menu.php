@@ -22,26 +22,38 @@ $error = null;
   <h3>Menu</h3>
 </div>
 <div class="underline"></div>
-<div class="container cardCarte ">
-<?php
-    foreach($formules as $formule) :
-        $menu = $MenuController->getIdMenu($formule->getMenu_Id());
-?>   
-<div class="card border-dark  mb-3" style="width: 18rem;">
-  <div class="card-body">
-     <div class="text-center p-2">
-        <h5><?= $menu->getTitle(); ?></h5>
-        <hr>
-        <p><?= $formule->getDescription(); ?></p>
-        <p><?= $formule->getPrice(); ?>€</p>
-        <a href="updateMenu.php?id=<?= $formule->getId(); ?>" class="btn btnCard" >Modifier</a>
-        <a href="deleteMenu.php?id=<?= $formule->getId(); ?>" class="btn btnCard" >Supprimer</a>
 
-     </div>
-  </div>
+<div class="container mt-5">
+<div class="table-responsive">
+  <table class="table table-bordered" width="100%" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Titre du menu</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Opérations</th>
+      </tr>
+    </thead>
+  <?php
+  foreach($formules as $formule) :
+  $menu = $MenuController->getIdMenu($formule->getMenu_Id());
+  ?> 
+<tbody>
+  <tr>
+    <th><?= $menu->getTitle(); ?></th>
+    <th><?= $formule->getDescription();?></th>
+    <th><?= $formule->getPrice();?>€</th>
+    <th>
+      <a href="updateMenu.php?id=<?= $formule->getId(); ?>" class="btn btnCard">Modifier</a>
+      <a href="deleteMenu.php?id=<?= $formule->getId(); ?>" class="btn btnCard">Supprimer</a>
+    </th>
+  </tr>
+</tbody>
+  <?php endforeach; ?>
+  </table>
 </div>
-<?php endforeach; ?>
 </div>
+
 <div class="container text-center mt-4">
 <a href="addMenu.php" class="btn btnCard" >Ajouter une formule</a>
 </div>
