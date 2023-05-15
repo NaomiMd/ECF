@@ -60,7 +60,7 @@ public function createAdmin(Admin $newAdmin): void
 
 public function verifyAdminLogin(string $email, string $password)
 {
-    $req = $this->pdo->prepare("SELECT * FROM admin WHERE email = :email");
+    $req = $this->pdo->prepare("SELECT * FROM `admin` WHERE email = :email");
     $req->bindParam(':email', $email, PDO::PARAM_STR);
     $req->execute();
     $admin = $req->fetch();
