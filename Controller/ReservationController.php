@@ -47,7 +47,7 @@ public function getReservationId($id) : Reservation
 
 public function createReservation(Reservation $newReservation)
 {
-    $req = $this->pdo->prepare("INSERT INTO `reservation` (date, hour, number_of_guest, name, email allergy, user_id, table_id) VALUES (:date, :hour, :number_of_guest, :name, :email, :allergy, :user_id, :table_id) ");
+    $req = $this->pdo->prepare("INSERT INTO `reservation` (date, hour, number_of_guest, name, email, allergy, user_id, table_id) VALUES (:date, :hour, :number_of_guest, :name, :email, :allergy, :user_id, :table_id) ");
     $req->bindValue(':date', $newReservation->getDate(), PDO::PARAM_STR);
     $req->bindValue(':hour', $newReservation->getHour(), PDO::PARAM_STR);
     $req->bindValue(':number_of_guest', $newReservation->getNumber_of_guest(), PDO::PARAM_INT);
