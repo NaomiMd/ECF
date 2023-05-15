@@ -4,11 +4,6 @@ require_once _ROOT_ . '\Controller\ReservationController.php';
 require_once _ROOT_ . '\Controller\TableController.php';
 require_once _ROOT_ . '\Controller\UserController.php';
 
-if(isset($_SESSION['email']))
-{
-  $userId = $_SESSION['email'] ;
-}
-
 $reservationController = new ReservationController();
 $tableController = new TableController();
 $tables = $tableController->maxGuest();
@@ -18,15 +13,15 @@ $userController = new UserController();
 if($_POST)
 {
   $reservation = $reservationController->booking();
+  if($reservation > $tables)
+  {
+    echo '<h5 class="text-center">Jour complet</h5>';
+  }
   $newReservation = new Reservation($_POST);
   $reservationController->createReservation($newReservation);
   echo"<script>window.location.href='templates/reservationConfirmation.php'</script>";
 }
-
-var_dump($_POST)
 ?>
-
-
 
 <div class="container" id="reservation" >
     <p class="text-center mb-5" >Merci de mentionner si nécessaire les allergies<br/>
@@ -62,7 +57,7 @@ compréhension.
 </div>
 
 <hr>
-<?php if(!isset($_SESSION['email'])) { ?>
+<?php if(!isset($_SESSION['user'])) { ?>
 <div class="input">
   <label for="allergy" class="form-label">Mention des allergies</label>
   <textarea class="form-control" name="allergy" id="" cols="10" rows="5"> </textarea>
@@ -77,7 +72,7 @@ compréhension.
 
 <div class="m-3">
   <label for="email" class="form-label">Email</label>
-  <input type="text" placeholder="Hojs@exemple.com" name="email" class="form-control" value="<?php if(isset($_SESSION["email"])){ echo $userId['email'];}else{} ?>" required>
+  <input type="text" placeholder="Hojs@exemple.com" name="email" class="form-control" value="<?php if(isset($_SESSION["user"])){ echo $_SESSION['user']['email'] ;}else{} ?>" required>
 </div>
 
 <!-- endif -->
