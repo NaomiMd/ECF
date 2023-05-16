@@ -45,19 +45,16 @@ compréhension.
   </select>
   <label class="input-group-text" for="number_of_guest"><i class="bi bi-people" id="people"></i></label>
 </div>
-
 <div class="input-group mt-3">
 <input placeholder="Cliquez et sélectionnez le jour qui vous convient" class="form-control" type="text" name="date" id="datepicker" value="" required>
 <label for="date" class="input-group-text"><i class="bi bi-calendar4-week"></i></label>
 </div>
-
 <div class="input-group mt-3">
     <input type="text" placeholder="Choissisez votre horaire" class="form-control" name="hour" id="datetimepicker5" required>
     <label for="hour" class="input-group-text"><i class="bi bi-clock"></i></label>
 </div>
-
 <hr>
-<?php if(!isset($_SESSION['user'])) { ?>
+<?php if(!isset($_SESSION['user']['email'])) { ?>
 <div class="input">
   <label for="allergy" class="form-label">Mention des allergies</label>
   <textarea class="form-control" name="allergy" id="" cols="10" rows="5"> </textarea>
@@ -74,14 +71,11 @@ compréhension.
   <label for="email" class="form-label">Email</label>
   <input type="text" placeholder="Hojs@exemple.com" name="email" class="form-control" value="<?php if(isset($_SESSION["user"])){ echo $_SESSION['user']['email'] ;}else{} ?>" required>
 </div>
-
-<!-- endif -->
 <div class="mb-3 mt-4">
   <button type="submit" class="btn-confirm">Confirmer</button>
   <a href="<?= generateLink('index.php') ?>" class="btn-retour">Retour</a>
 </div>
 </form>
-
 </div>
 </div> 
 
