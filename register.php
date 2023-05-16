@@ -23,6 +23,7 @@ if(isset($_POST['login']))
     unset($_POST['confirmPassword']);
     $newUser = new User($_POST);
     $userController->createUser($newUser);
+    $_SESSION['user'] = $_POST['email'];
     echo"<script>window.location.href='index.php'</script>";
   }else{
     echo"<h5 class='text-center'>Le mot de passe ne correspond pas à celui entré</h5>";

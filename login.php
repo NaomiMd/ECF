@@ -5,19 +5,18 @@ require_once _ROOT_ . '\templates\navbar.php';
 require_once _ROOT_ . '\Controller\UserController.php';
 require_once _ROOT_ . '\Controller\AdminController.php';
 
-if(isset($_SESSION['user']['email']))
+if(isset($_SESSION['user']))
 {
   header('location: index.php');
 }
-if(isset($_SESSION['admin']['email']))
+if(isset($_SESSION['admin']))
 {
   header('location: index.php');
 }
 
 $userController = new UserController();
 $adminController = new AdminController();
-var_dump($_POST); 
-var_dump(empty($_SESSION));
+
 ?>
 
 <div class="container-fluid" id="banner-login">
@@ -32,14 +31,13 @@ if($_POST)
 {
   $user = $userController->verifyLoginUser($_POST['email'], $_POST['password']);
   $admin = $adminController->verifyAdminLogin($_POST['email'], $_POST['password']);
-
   if($user)
   {
-    $_SESSION['user']['email'] = ['email' => $user['email']];
+    $_SESSION['user'] = ['email' => $user['email']];
     header('location: index.php');
   }elseif($admin)
   {
-    $_SESSION['admin']['email'] = ['email' => $admin['email']];
+    $_SESSION['admin'] = ['email' => $admin['email']];
     header('location: index.php');
   }else{
     echo '<h3 class="text-center mt-3" style="color:red" >Identifiants invalides</h3>';
