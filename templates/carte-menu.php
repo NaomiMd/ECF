@@ -3,25 +3,19 @@ require_once _ROOT_ . '\Controller\CategoryController.php';
 require_once _ROOT_ . '\Controller\FormuleController.php';
 require_once _ROOT_ . '\Controller\DishController.php';
 require_once _ROOT_ . '\Controller\MenuController.php';
-
 $CategoryController = new CategoryController();
 $categories = $CategoryController->getAll();
-
 $DishController = new DishController();
 $dishes = $DishController->getAll();
-
 $FormuleController = new FormuleController();
 $formules = $FormuleController->getAll();
-
 $MenuController = new MenuController();
-
 ?>
 <div class="container-fluid" id="banner-carte">
         <div>
           <h1 class="pagetitle" >Carte & Menus</h1>
         </div>
 </div>
-
 <div class="container-fluid menus">
 <h3 class="text-center mt-4" id="titlemenu">Les Menus</h3>
 <div class="underline"></div>

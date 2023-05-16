@@ -10,15 +10,11 @@ $galeries = $galerieController->getAll();
           <img class="logoheader" src="<?= generateLink('assets/img/logo.png') ?>" alt="logo">
         </div>
 </div>
-
-
 <div class="container-fluid text-center" id="presentation" >
     <h4>restaurant gastronomique à chambéry</h4>
     <h5>Distingué de 2 étoiles au Guide Michelin</h5>
     <div class="highlight" ></div>
 </div>
-<!-- présentation du chef -->
-
 <div class="container-fluid cuisine">
     <img src="<?= generateLink('assets/img/chef.jpg') ?>" alt="Le chef Arthur Michant" class="img-chef" >
   <div class="text">
@@ -51,9 +47,6 @@ $galeries = $galerieController->getAll();
 </div>
 <div class="horizontalLeft"></div>
 </div>
-
-
-
 <div class="container-fluid mt-5 cuisine">
     <div class="text">
     <h2>L'équipe</h2>
@@ -67,8 +60,6 @@ $galeries = $galerieController->getAll();
 </div>
     <img src="<?= generateLink('assets/img/equipe.jpg') ?>" alt="img" class="img-cuisine" >
 </div>
-
-<!-- GALERIE -->
 <div id="grid">
     
     <?php
@@ -80,9 +71,6 @@ $galeries = $galerieController->getAll();
     </div>
     <?php endforeach ; ?>
 </div>
-
-<!-- RESERVER -->
-
 <div class="container-fluid button d-flex justify-content-center">
     <a class="btn-reserver" href="<?= generateLink('reservation.php') ?>">Réserver</a>
 </div>
