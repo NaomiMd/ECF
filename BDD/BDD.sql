@@ -58,7 +58,7 @@ CREATE TABLE reservation(
     email VARCHAR(50) NOT NULL,
     user_id INT,
     FOREIGN KEY(user_id) REFERENCES user(id),
-    table_id INT NOT NULL,
+    table_id INT,
     FOREIGN KEY(table_id) REFERENCES tables(id)
 )ENGINE=INNODB;
 
@@ -82,6 +82,7 @@ INSERT INTO admin (id, email, password, role) VALUES (2, 'dallassmalles@exemple.
 INSERT INTO user (id, email, password, allergy, number_of_guest, role) VALUES (1, 'saulcheales@exemple.com', '$2y$10$PbMuts3xbXJP2lfn0ZTML.6LdU5uGcyZqH/ck3ws2ltA.HWxrQanC', 'poisson', '2', 'subscriber');
 INSERT INTO user (id, email, password, allergy, number_of_guest, role) VALUES (2, 'marlojersh@exemple.com', '$2y$10$Ya3FxUXu.9HXXwivjjh9F.36Af5yrmmebPG4oqfOWWhkPENtQIUzy', 'arachide', '6', 'subscriber');
 INSERT INTO user (id, email, password, allergy, number_of_guest, role) VALUES (3, 'bernypea@exemple.com', '$2y$10$aYqInxNurNbRL4Rx1KjcYOhwxpr7XtKg5xxi7jwJqwEiCYYTzvz9e', NULL, '4', 'subscriber');
+INSERT INTO user (id, email, password, allergy, number_of_guest, role) VALUES (4, 'test@test.com', '$2y$10$aNS1Jh8MsnRffX09Kz9f0uTR/gh65HWloTkanQTjTmBKVQ0whbxbq', NULL, '4', 'subscriber');
 
 INSERT INTO menu (id, title) VALUES (1, 'Déjeuner');
 INSERT INTO menu (id, title) VALUES (2, 'Dîner');
@@ -103,7 +104,7 @@ INSERT INTO dish (id, title, description, price, category_id) VALUES (6, 'Bugnes
 INSERT INTO tables(id, limited_seats) VALUES (1, 50);
 
 INSERT INTO reservation(id, date, hour, number_of_guest, name, allergy, email,user_id, table_id) VALUES (1, '2023-05-16', '12:00:00', 2, 'Mickerlson', 'poisson', 'Micher@gmail.com', NULL, NULL);
-INSERT INTO reservation(id, date, hour, number_of_guest, name, allergy, email,user_id, table_id) VALUES (1, '2023-05-24', '19:00:00', 6, 'Klar', 'fruit de mer', 'Klar@gmail.com', NULL, NULL);
+INSERT INTO reservation(id, date, hour, number_of_guest, name, allergy, email,user_id, table_id) VALUES (2, '2023-05-24', '19:00:00', 6, 'Klar', 'fruit de mer', 'Klar@gmail.com', NULL, NULL);
 
 INSERT INTO hour(id, opening_morning, closing_morning, opening_night, closing_night) VALUES (1, '12:00', '14:00', '19:00', '22:00');
 
