@@ -49,7 +49,7 @@ public function getUserId($id): User
 public function createUser(User $newUser)
 {
     $req = $this->pdo->prepare("INSERT INTO `user` (email, password, allergy, number_of_guest, role) VALUES (:email, :password, :allergy, :number_of_guest, :role)");
-    $hashedPassword = password_hash($newUser->getPassword(), PASSWORD_BCRYPT);
+    $hashedPassword = password_hash($newUser->getPassword(), PASSWORD_DEFAULT);
     $role = 'subscriber';
     $req->bindValue(":email", $newUser->getEmail(), PDO::PARAM_STR);
     $req->bindValue(":password", $hashedPassword, PDO::PARAM_STR);
@@ -69,8 +69,8 @@ public function deleteUser(int $id)
 
 public function verifyLoginUser(string $email, string $password)
 {
-    $req= $this->pdo->prepare("SELECT * FROM user WHERE email=:email");
-    $req->bindValue(':email', $email, PDO::PARAM_STR);
+    $req= $this->pdo->prepare("SELECT * FROM `user` WHERE email=:email");
+    $req->bindParam(':email', $email, PDO::PARAM_STR);
     $req->execute();
     $user = $req->fetch();
 
